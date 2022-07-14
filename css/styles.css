@@ -3,6 +3,14 @@
     margin: 0;
 }
 
+:root{
+    --cardBackground: rgb(106, 106, 106);
+}
+
 html{
     scroll-behavior: smooth;
+}
+
+.container{
+    background-color: var(--cardBackground);
 }
