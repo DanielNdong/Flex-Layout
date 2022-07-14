@@ -4,7 +4,8 @@
 }
 
 :root{
-    --cardBackground: rgb(106, 106, 106);
+    --background: #080f28;
+    --backgroundOpacity: #080f28a9;
 }
 
 html{
@@ -12,5 +13,6 @@ html{
 }
 
 .container{
-    background-color: var(--cardBackground);
+    height: 100%;
+    background-color: var(--background);
 }
