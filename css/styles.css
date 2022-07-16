@@ -6,13 +6,205 @@
 :root{
     --background: #080f28;
     --backgroundOpacity: #080f28a9;
+    --link: rgb(234, 233, 233);
+    --inputBackground: rgba(50, 52, 105, 0.485); 
 }
 
 html{
     scroll-behavior: smooth;
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+/*Encabezado de la pagina*/
+.header{
+    position: relative;
+    height: 28rem;
+    z-index: 2;
+}
+
+/* ---- AQUI INICIA EL NAV-HEADER */
+.header nav{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--backgroundOpacity);
+    z-index: 2;
+}
+
+.header__nav__container{
+    width: 80.5%;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Es es el contenedor del logoy el <ul> */
+.nav__link__container{
+    display: flex;
+}
+
+.nav__link__container > a{
+    display: flex;
+    align-items: center;
+}
+
+/* Es es el <ul> del encabezado */
+.header__list{
+    margin-left: 1.5rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header__list > li{
+    margin: 0 1.3rem 0 1.3rem;
+    color: var(--link);
+    letter-spacing: 1;
+    font-size: 1rem;
+}
+
+/* Form del input:search del nav que esta en el header */
+.nav__form__container > form{
+    display: flex;
+    justify-content: center;
+}
+
+/* El contenedor del input_search del nav */
+.nav__form__container > form > div{
+    padding: .6rem .8rem;
+    width: 7.5rem;
+    border: 2px solid #fff;
+    border-radius: 5rem;
+    background-color: var(--inputBackground);
+}
+
+.nav__form__container > form input{
+    width: 100%;
+    background-color: transparent;
+    color: var(--link);
+    border: none;
+    outline: none;
+}
+/* ***** FIN DEL NAV-HEADER ***** */
+
+
+/* CAROUSSEL DEL HEADER */
+.header__caroussel__container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+/* Cada contener del caroussel  */
+.caroussel__item__container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+}
+
+.caroussel__item__body{
+    width: 80.5%;
+    height: 40%;
+    color: var(--link);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.caroussel__item__body > header{
+    display: flex;
+    width: 22rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* La palabra 'SERIE' del header*/
+.caroussel__item__body > header > div{
+    padding: .3rem .5rem;
+    background-color: rgb(253, 237, 16);
+    border-radius: 50px;
+    font-size: .8rem;
+    font-weight: bold;
+    color:rgb(253, 253, 253)
+}
+
+/* La palabra 'HD' del header */
+.caroussel__item__body .quality{
+    padding: .3rem .4rem;
+    background-color: rgb(253, 237, 16);
+    border-radius: 50px;
+    font-size: .8rem;
+    font-weight: bold;
+    color:rgb(241, 241, 241);
+}
+
+.caroussel__item__body .calf{
+    padding: .3rem .4rem;
+    background-color:rgba(253, 119, 16);
+    color: #fefefe;
+    border-radius: 50px;
+    font-weight: bold;
+} 
+
+.caroussel__item__body > div:nth-child(4){
+    padding: .4rem 1rem;
+    border-radius: 2rem;
+    background-color: rgb(20, 165, 213);
+    font-weight: bold;
+}
+
+.caroussel__item__body > div:nth-child(4) > a {
+    color: #fff;
+}
+
+.header__caroussel__container >
+    .caroussel__item__container:nth-child(3){
+        object-fit: cover;
+        /* background: #0000 url("") no-repeat center/cover; */
+        backdrop-filter: 3;
+        
+}
+
+figure > img{
+    box-shadow: inset 1em 2em rgba(91, 91, 125, 0.189);
+}
+
+/* ENTRAMOS EN EL MAIN */
+main{
+    min-width: 100%;
+    max-width: 50%;
+    padding: 0 8.2rem;
+    display: flex;
+    background-color: var(--background);
+}
+
+h2,h3{
+    color: var(--link);
+}
 .container{
     height: 100%;
-    background-color: var(--background);
 }

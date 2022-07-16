@@ -7,51 +7,67 @@
     <title>Flex style</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/jpg" href="assets/favicon.jpg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav>
-            <a href="">
-                <img src="https://b.entrepeliculasyseries.me/peliculasyseries/logomin.png" alt="">
-            </a>
-            <ul>
-                <li>
-                    Inicio
-                </li>
-                <li class="aft">
-                    Géneros
-                </li>
-                <li class="aft">
-                    Películas
-                </li>
-                <li class="aft">
-                    Series
-                </li>
-            </ul>
-            <div>
-                <form>
-                    <div>
-                        <input type="search" name="busqueda" id="buscar">
-                        <img src="" alt="">
-                    </div>
-                </form>
+            <div class="header__nav__container">
+                <div class="nav__link__container">
+                    <a href="">
+                        <img src="https://b.entrepeliculasyseries.me/peliculasyseries/logomin.png" alt="">
+                    </a>
+                    <ul class="header__list">
+                        <li>
+                            Inicio
+                        </li>
+                        <li class="aft">
+                            Géneros
+                            <img src="" alt="">
+                        </li>
+                        <li class="aft">
+                            Películas
+                            <img src="" alt="">
+                        </li>
+                        <li class="aft">
+                            Series
+                            <img src="" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <!-- Boton de buscar -->
+                <div class="nav__form__container">
+                    <form>
+                        <div>
+                            <input autocomplete="off" type="search" name="busqueda" id="buscar" placeholder="Buscar..">
+                            <img src="" alt="">
+                        </div>
+                    </form>
+                </div>
+                <!-- -------- -->
             </div>
         </nav>
-        <section class="caroussel__container">
-            <div class="caroussel__item">
+        <section class="header__caroussel__container">
+            <div class="caroussel__item__container">
                 <div class="caroussel__item__body">
+                    <div>
+                        <p>figure</p>
+                    </div>
                     <header>
                         <h2>Minions: El origen de Gru</h2>
                         <div>SERIE</div>
                     </header>
                     <div>
                         <p>
-                            <span>3.5/5</span> 2h 28m 2022 <span class="quality">HD</span>
+                            <span class="calf">3.5/5</span> 2h 28m 2022 <span class="quality">HD</span>
                         </p>
                     </div>
                     <div>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab repellendus, nam nobis hic corrupti sunt excepturi perferendis accusantium, cumque eaque ullam 
+                            Primera ipsum dolor, sit amet consectetur adipisicing 
+                            elit. Ab repellendus, nam <br> nobis hic corrupti sunt excepturi perferendis accusantium, cumque eaque ullam 
                         </p>
                     </div>
                     <div>
@@ -61,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <div class="caroussel__item">
+            <div class="caroussel__item__container">
                 <div class="caroussel__item__body">
                     <header>
                         <h2>Minions: El origen de Gru</h2>
@@ -69,12 +85,13 @@
                     </header>
                     <div>
                         <p>
-                            <span>3.5/5</span> 2h 28m 2022 <span class="quality">HD</span>
+                            <span class="calf">3.5/5</span> 2h 28m 2022 <span class="quality">HD</span>
                         </p>
                     </div>
                     <div>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab repellendus, nam nobis hic corrupti sunt excepturi perferendis accusantium, cumque eaque ullam 
+                            Primera ipsum dolor, sit amet consectetur adipisicing 
+                            elit. Ab repellendus, nam <br> nobis hic corrupti sunt excepturi perferendis accusantium, cumque eaque ullam 
                         </p>
                     </div>
                     <div>
@@ -84,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <div class="caroussel__item">
+            <div class="caroussel__item__container">
                 <div class="caroussel__item__body">
                     <header>
                         <h2>Minions: El origen de Gru</h2>
@@ -92,12 +109,13 @@
                     </header>
                     <div>
                         <p>
-                            <span>3.5/5</span> 2h 28m 2022 <span class="quality">HD</span>
+                            <span class="calf">3.5/5</span> 2h 28m 2022 <span class="quality">HD</span>
                         </p>
                     </div>
                     <div>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab repellendus, nam nobis hic corrupti sunt excepturi perferendis accusantium, cumque eaque ullam 
+                            Primera ipsum dolor, sit amet consectetur adipisicing 
+                            elit. Ab repellendus, nam <br> nobis hic corrupti sunt excepturi perferendis accusantium, cumque eaque ullam 
                         </p>
                     </div>
                     <div>
@@ -245,7 +263,6 @@
                 </article>
             </section>
         </section>
-    </main>
     <aside>
         <section class="aside__section__bigImage">
             <img src="" alt="">
@@ -306,6 +323,7 @@
             </article>
         </section>
     </aside>
+</main>
     <footer>
         <section class="footer__body">
             <div class="footer__body__links">
