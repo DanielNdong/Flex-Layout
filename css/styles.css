@@ -5,9 +5,16 @@
 
 :root{
     --background: #080f28;
-    --backgroundOpacity: #080f28a9;
+    --backgroundOpacity: #080f2892;
     --link: rgb(234, 233, 233);
-    --inputBackground: rgba(50, 52, 105, 0.485); 
+    --inputBackground: rgba(50, 52, 105, 0.485);
+    --infoadicional: rgb(249, 166, 24); 
+    --buttonColor: rgb(10, 141, 255);
+}
+
+/* Le damos estilos a los placeholder */
+::placeholder{
+    color: rgb(130, 150, 169);
 }
 
 html{
@@ -30,8 +37,8 @@ li{
 /*Encabezado de la pagina*/
 .header{
     position: relative;
-    height: 28rem;
-    z-index: 2;
+    height: 29.5rem;
+    /* z-index: 2; */
 }
 
 /* ---- AQUI INICIA EL NAV-HEADER */
@@ -87,47 +94,61 @@ li{
 
 /* El contenedor del input_search del nav */
 .nav__form__container > form > div{
-    padding: .6rem .8rem;
-    width: 7.5rem;
-    border: 2px solid #fff;
+    padding: .8rem 1rem;
+    width: 8.5rem;
+    border: 1px solid rgb(2, 50, 98);
     border-radius: 5rem;
-    background-color: var(--inputBackground);
+    background-color: rgba(1, 29, 57, 0.274);
 }
 
 .nav__form__container > form input{
     width: 100%;
     background-color: transparent;
     color: var(--link);
+    font-size: .9rem;
     border: none;
     outline: none;
 }
+
+
 /* ***** FIN DEL NAV-HEADER ***** */
 
 
 /* CAROUSSEL DEL HEADER */
 .header__caroussel__container{
     position: relative;
-    display: flex;
     width: 100%;
     height: 100%;
     background-color: lightblue;
     overflow: hidden;
 }
 
+.caroussel__container{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-type: x proximity;
+}
+
 /* Cada contener del caroussel  */
-.caroussel__item__container{
-    position: absolute;
+.caroussel__item{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--background);
+    background: var(--backgroundOpacity);
+    scroll-snap-align: center;
 }
 
+
 .caroussel__item__body{
+    margin-bottom: 2rem;
     width: 80.5%;
-    height: 40%;
+    height: 52%;
+    margin-top: 4rem;
     color: var(--link);
     display: flex;
     flex-direction: column;
@@ -137,66 +158,68 @@ li{
 
 .caroussel__item__body > header{
     display: flex;
-    width: 22rem;
-    justify-content: space-between;
+    width: 46rem;
+    justify-content: flex-start;
     align-items: center;
 }
 
-/* La palabra 'SERIE' del header*/
+.caroussel__item__body > header > h2{
+    font-size: 3rem;
+    margin-right: .3rem;
+}
+
+/* La palabra 'PELICULA' del header*/
 .caroussel__item__body > header > div{
-    padding: .3rem .5rem;
-    background-color: rgb(253, 237, 16);
+    padding: .2rem .3rem;
+    background-color: var(--infoadicional);
     border-radius: 50px;
-    font-size: .8rem;
+    font-size: .4rem;
     font-weight: bold;
-    color:rgb(253, 253, 253)
+    color:rgb(38, 37, 37);
 }
 
 /* La palabra 'HD' del header */
 .caroussel__item__body .quality{
-    padding: .3rem .4rem;
-    background-color: rgb(253, 237, 16);
+    padding: .2rem .4rem;
+    background-color: var(--infoadicional);
     border-radius: 50px;
-    font-size: .8rem;
+    font-size: .6rem;
     font-weight: bold;
-    color:rgb(241, 241, 241);
+    color:rgb(38, 37, 37);
 }
 
 .caroussel__item__body .calf{
     padding: .3rem .4rem;
-    background-color:rgba(253, 119, 16);
-    color: #fefefe;
+    color: var(--infoadicional);
     border-radius: 50px;
-    font-weight: bold;
+    font-weight: 400;
 } 
 
+.caroussel__item__body > div:nth-child(3){
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    color: var(--link);
+}
+
 .caroussel__item__body > div:nth-child(4){
-    padding: .4rem 1rem;
+    width: 7rem;
+    padding: .9rem 1.4rem;
     border-radius: 2rem;
-    background-color: rgb(20, 165, 213);
-    font-weight: bold;
+    background-color: var(--buttonColor);
+    font-weight: 400;
+    letter-spacing: 1;
+    text-align: center;
 }
 
 .caroussel__item__body > div:nth-child(4) > a {
     color: #fff;
 }
 
-.header__caroussel__container >
-    .caroussel__item__container:nth-child(3){
-        object-fit: cover;
-        /* background: #0000 url("") no-repeat center/cover; */
-        backdrop-filter: 3;
-        
-}
-
-figure > img{
-    box-shadow: inset 1em 2em rgba(91, 91, 125, 0.189);
-}
 
 /* ENTRAMOS EN EL MAIN */
 main{
-    min-width: 100%;
-    max-width: 50%;
+    min-width: 50rem;
+    max-width: 100%;
     padding: 0 8.2rem;
     display: flex;
     background-color: var(--background);
@@ -205,6 +228,229 @@ main{
 h2,h3{
     color: var(--link);
 }
+
 .container{
+    width: 73%;
     height: 100%;
+    margin-right: 2rem;
 }
+
+.lastEntry{
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+/* La primera section de la pagina */
+.lastEntry__header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lastEntry__header > div:nth-child(2){
+    padding: .4rem 1rem;
+    border-radius: 2rem;
+    background-color: var(--buttonColor);
+    font-weight: 400;
+    color: var(--link);
+    font-size: .9rem;
+}
+
+/* Damos flex al primer contendor de 'lasEntry__header' */
+.lastEntry__header > div:nth-child(1){
+    display: flex;
+}
+
+/* Aplicamos margen al primer h2 de 'lastEntry_header' */
+.lastEntry__header > div:nth-child(1) > h2:nth-child(1){
+    margin-right: 1.1rem;
+}
+
+/* Contenedor de las cards de la primer seccion */
+.lastEntry__body{
+    display: flex;
+    width: 100%;
+    height: 7rem;
+    justify-content: space-between;
+}
+
+.lastEntry__body__items{
+    width: 23%;
+    height: 90%;
+    background-color: lightcoral;
+    border-radius: .4rem;
+}
+
+
+
+.onlineFilm__header{
+    display: flex;
+    align-items: center;
+}
+
+.onlineFilm__header > ul{
+    display: inline-flex;
+    color: var(--link);
+}
+
+.onlineFilm__body{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 18rem);
+    /* grid-auto-rows: minmax(200px,200px); */
+    gap: 15px;
+}
+
+.onlineFilm__body__item{
+    background-color: rgb(232, 221, 10);
+    border-radius: .3rem
+}
+
+.onlineFilm > button{
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    background-color: rgb(80, 80, 176);
+    border-radius: 10rem;
+    color: var(--link);
+    font-size: .9rem;
+}
+
+.seriesOnline{
+    margin-top: 4.5rem;
+}
+
+.seriesOnline__header{
+    margin-bottom: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seriesOnline__header > div{
+    display: flex;
+    align-items: center;
+    color: var(--link);
+}
+
+.seriesOnline__header ul{
+    display: inline-flex;
+    margin-left: 2rem;
+    color: var(--link);
+}
+
+.seriesOnline__body{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 18rem);
+    gap: 15px;
+}
+
+.seriesOnline__body__item{
+    border-radius: .3rem;
+    background-color: lightsalmon;
+}
+
+
+/* El ASIDE  */
+main > aside{
+    width: 27%;
+    background-color: var(--background);
+    display: grid;
+    grid-template-rows: 230px 150px auto ;
+    gap: 25px
+}
+
+.aside__section__bigImage{
+    background-color: lightskyblue;
+}
+
+.aside__section__languages{
+    background-color: lightgrey;
+}
+
+.aside__section__languages > div:nth-child(1){
+    height: 50px;
+    display: flex;
+    background-color: rgb(28, 30, 50);
+    justify-content: center;
+    align-items: center;
+    font-size: .6rem;
+    font-weight: 400;
+    letter-spacing: 2;
+    border-radius: .2rem;
+}
+
+.aside__section__films{
+    background-color: lightsteelblue;
+}
+
+.aside__section__films > div:nth-child(1){
+    height: 50px;
+    display: flex;
+    background-color: rgb(28, 30, 50);
+    justify-content: center;
+    align-items: center;
+    font-size: .6rem;
+    font-weight: 400;
+    letter-spacing: 2;
+    border-radius: .2rem;
+    margin-bottom: 1.1rem;
+}
+
+.card__item{
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    height: 10rem;
+}
+
+.card__item__img{
+    width: 40%;
+    background-color: lawngreen;
+    border-radius: .3rem;
+}
+
+.card__item__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .3rem;
+}
+.card__item__body{
+    margin-left: 1rem;
+    width: 60%;
+    height: 5.5rem;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* EL FOOTER */
+footer{
+    padding: 0 8.2rem;
+    padding-top: 5rem;
+    height: 15rem;
+    background-color: var(--background);
+    color: var(--link);
+}
+
+.footer__body__links > div:nth-child(1){
+    display: flex;
+    width: 25rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
