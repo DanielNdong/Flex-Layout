@@ -249,7 +249,7 @@ ajuste al centro del contenedor siempre */
     display: flex;
     justify-content: space-between;
     margin: 1rem 0 .8rem 1.6rem;
-    /* scroll-snap-type: x mandatory; */
+    scroll-snap-type: x mandatory;
 }
 
 
